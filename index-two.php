@@ -5,7 +5,6 @@
 <body>
 
 
-
 	<?php
 		$letter = strtoupper($_GET['letter']);
 		$number = $_GET['number'];
@@ -13,14 +12,19 @@
 		$counter = 1;
     $test = "D";
 		echo $_POST["letter"];
+
+    $size = $number;
+    if ($size > 100) {
+      $size = $size /10;
+    }
+
 		while ($counter <= $number) {
-      echo "<img style='transform: skew($skewX);' src='$letter.jpg'> ";
+      echo "<img style='transform: skew($skewX);' src='$letter.png' ";
 			$counter++;
-			// $rotation = $rotation + 20;
 			$rotation++;
-			// $size++;
 		}
-	 ?>
+
+	?>
 
 	</script>
 </body>
